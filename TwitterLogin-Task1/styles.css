@@ -1,0 +1,39 @@
+.maincontent {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: large;
+    padding-top: 0; 
+    margin: 0; 
+}
+
+.footercontent {
+    height: 15vh;
+    background-color: rgb(185, 181, 177);
+    padding: 0;
+    padding-left: 150px;
+    font-size: large;
+}
+
+.mybtn {
+    background-color: blue;
+    color: white;
+    border: 3px black;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.em, .pw {
+    width: 300px;
+    height: 50px;
+}
+
+.mainbox {
+    margin-left: 450px;
+    margin-right: 450px;
+    border: 3px solid black;
+    border-radius: 3px;
+    padding-top: 30px;
+}
