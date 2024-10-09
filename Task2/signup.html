@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-section flex items-center justify-center">
+            <form class="max-w-sm mx-auto">
+                <h3 class="text-3xl font-bold dark:text-black">Get Started Now</h3>
+                <br><br>
+                <div class="mb-5">
+                    <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Name</label>
+                    <input type="text" id="namebox" class="shadow-sm bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter Your Name"/>
+                </div>
+                <div class="mb-5">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email Address</label>
+                    <input type="email" id="emailbox" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter Your Email"/>
+                </div>
+                <div class="mb-5">
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password</label>
+                    <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Password"/>
+                </div>
+                <div class="inline-flex items-center">
+                    <label class="flex items-center cursor-pointer relative" for="check-with-link">
+                        <input type="checkbox" checked class="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded shadow hover:shadow-md border border-slate-300 checked:bg-slate-800 checked:border-slate-800" id="check-with-link" />
+                        <span class="absolute text-white opacity-0 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                    </label>
+                    <label class="cursor-pointer ml-2 text-slate-600 text-xs" for="check-with-link">
+                        <p>
+                            I agree to the
+                            <a href="#" class="font-medium hover:text-slate-800 underline">
+                                terms & policy
+                            </a>.
+                        </p>
+                    </label>
+                </div>
+
+                <br><br>
+                <div class="flex flex-col items-start w-full max-w-md">
+                    <button class="w-full rounded-md bg-green-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none ml-2" type="button">
+                        Signup
+                    </button>
+                    <br>
+                    <div class="relative flex items-center justify-start w-full mt-4">
+                        <hr class="w-full h-px bg-gray-200 border-0"> 
+                        <span class="absolute px-3 font-medium text-black bg-white left-1/2 -translate-x-1/2">Or</span>
+                    </div>
+                    <br>
+                    <div class="flex space-x-4 mt-4 w-full">
+                        <div class="flex-1">
+                            <button class="px-4 py-2 border flex items-center gap-2 border-gray-300 rounded-lg text-black hover:border-gray-400 hover:text-black hover:shadow transition duration-150 w-full whitespace-nowrap">
+                                <img class="w-5 h-5" src="https://www.svgrepo.com/show/475656/google-color.svg" style="width: 20px; height: 20px;" loading="lazy" alt="google logo">
+                                <span class="text-sm">Sign in with Google</span>
+                            </button>
+                        </div>                                             
+                        <div class="flex-1">
+                            <button type="button" class="px-4 py-2 inline-flex items-center rounded-lg text-black text-sm font-semibold border border-gray-300 outline-none bg-white hover:bg-[#f0f0f0] active:bg-[#e0e0e0] w-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="#000" class="inline mr-2" viewBox="0 0 22.773 22.773">
+                                    <path
+                                        d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zm4.901 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z"
+                                        data-original="#000000" />
+                                </svg>
+                                Sign in with Apple
+                            </button>
+                        </div>                        
+                    </div>
+                    <div class="flex justify-center w-full mt-4">
+                        <p class="text-center text-sm text-gray-600">
+                            Have an account? 
+                            <a href="./signin.html" class="text-blue-500 hover:underline">Sign in</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="image-section">
+            <img src="./resources/ui-image-task2.jpeg" alt="Signup Image" class="w-full h-auto object-cover rounded-tl-3xl rounded-bl-3xl">
+        </div>
+              
+    </div>
+</body>
+</html>
