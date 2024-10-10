@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+
+<body>
+    <div class="min-h-screen flex items-center justify-center bg-gray-100 p-4">
+        <div class="container mx-auto flex flex-col lg:flex-row bg-white shadow-lg rounded-lg overflow-hidden items-center">
+            <!-- Form section -->
+            <div class="form-section w-full lg:w-1/2 p-6 flex items-center justify-center">
+                <form class="w-full max-w-sm mx-auto">
+                    <h3 class="text-3xl font-bold text-center mb-6">Get Started Now</h3>
+                    <div class="mb-5">
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
+                        <input type="text" id="namebox" class="shadow-sm bg-white-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Enter Your Name" />
+                    </div>
+                    <div class="mb-5">
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email Address</label>
+                        <input type="email" id="emailbox" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Enter Your Email" />
+                    </div>
+                    <div class="mb-5">
+                        <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password</label>
+                        <input type="password" id="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Password" />
+                    </div>
+                    <div class="inline-flex items-center mb-5">
+                        <label class="flex items-center cursor-pointer" for="check-with-link">
+                            <!-- Regular checkbox without custom styling -->
+                            <input type="checkbox" id="check-with-link" class="h-5 w-5 cursor-pointer text-green-800 border-gray-300 rounded-sm transition-all" />
+                            <span class="ml-2 text-sm text-slate-600">I agree to the
+                                <a href="#" class="font-medium hover:text-slate-800 underline">terms & policy</a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="flex flex-col items-start w-full">
+                        <button class="w-full rounded-md bg-green-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none mb-4" type="button">
+                            Signup
+                        </button>
+
+                        <div class="relative flex items-center w-full mb-4">
+                            <hr class="w-full h-px bg-gray-200 border-0">
+                            <span class="absolute px-3 font-medium text-black bg-white left-1/2 -translate-x-1/2">Or</span>
+                        </div>
+
+                        <div class="flex space-x-4 w-full">
+                            <button class="w-1/2 px-4 py-2 border flex items-center justify-center gap-2 border-gray-300 rounded-lg text-black hover:border-gray-400 hover:text-black hover:shadow transition duration-150">
+                                <img class="w-5 h-5" src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+                                <span class="text-sm">Sign in with Google</span>
+                            </button>
+                            <button type="button" class="w-1/2 px-4 py-2 inline-flex items-center justify-center rounded-lg text-black text-sm font-semibold border border-gray-300 bg-white hover:bg-gray-100 active:bg-gray-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="mr-2" fill="#000" viewBox="0 0 22.773 22.773">
+                                    <path d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zm4.901 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z" />
+                                </svg>
+                                Sign in with Apple
+                            </button>
+                        </div>
+
+                        <p class="text-center text-sm text-gray-600 mt-4">
+                            Have an account? 
+                            <a href="./signin.html" class="text-blue-500 hover:underline">Sign in</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Image section, hidden on smaller screens -->
+            <div class="hidden lg:flex lg:w-1/2 items-center justify-center">
+                <img src="./resources/ui-image-task2.jpeg" alt="Signup Image" class="w-full h-auto object-cover rounded-tl-3xl rounded-bl-3xl">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
