@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 h-screen flex items-center justify-center">
+    
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg border border-gray-200">
+        <div class="mb-4">
+            <h1 class="text-4xl font-extrabold leading-none tracking-tight text-indigo-600 md:text-5xl lg:text-6xl whitespace-nowrap">To-Do Application</h1>
+        </div>
+
+        <div class="mb-6">
+            <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Plan your day efficiently!</p>
+        </div>
+
+        <form class="w-full max-w-2xl mb-6" onsubmit="addTask(event)">
+            <div class="flex items-center border-b border-indigo-400 py-2">
+              <input id="taskInput" class="appearance-none bg-transparent border-none w-full text-indigo-700 placeholder-gray-400 mr-3 py-2 px-2 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-400" type="text" placeholder="Type your task here!" aria-label="Task">
+              <button class="flex-shrink-0 bg-indigo-500 hover:bg-indigo-600 text-sm border-4 border-indigo-500 hover:border-indigo-600 text-white py-2 px-4 rounded-full transition duration-300" type="submit">
+                +
+              </button>
+            </div>
+        </form>
+
+        <div id="taskContainer" class="space-y-4 w-full max-w-2xl"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', loadTasks);
+
+        function getTasks() {
+            const tasks = localStorage.getItem('tasks');
+            return tasks ? JSON.parse(tasks) : [];
+        }
+
+        function saveTasks(tasks) {
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function loadTasks() {
+            const tasks = getTasks();
+            const taskContainer = document.getElementById('taskContainer');
+            taskContainer.innerHTML = '';
+            tasks.forEach((task, index) => {
+                taskContainer.innerHTML += `
+                    <div class="bg-teal-100 p-4 rounded-md flex justify-between items-center text-teal-800">
+                        <span>${task}</span>
+                        <button onclick="editTask(${index}, '${task}')" class="bg-yellow-500 text-white px-4 py-1 rounded">Edit</button>
+                        <button onclick="deleteTask(${index})" class="bg-red-500 text-white px-4 py-1 rounded">Delete</button>
+                    </div>
+                `;
+            });
+        }
+
+        function addTask(event) {
+            event.preventDefault();
+            const taskInput = document.getElementById('taskInput');
+            const task = taskInput.value.trim();
+            if (!task) {
+                alert('Please enter a task');
+                return;
+            }
+            
+            const tasks = getTasks();
+            tasks.push(task); 
+            saveTasks(tasks); 
+            loadTasks();
+            taskInput.value = ''; 
+        }
+
+        function deleteTask(index) {
+            const tasks = getTasks();
+            tasks.splice(index, 1); 
+            saveTasks(tasks); 
+            loadTasks();
+        }
+
+        function editTask(index, task) {
+            const newTask = prompt('Edit your task:', task);
+            if (newTask !== null && newTask.trim() !== '') {
+                const tasks = getTasks();
+                tasks[index] = newTask.trim(); 
+                saveTasks(tasks); 
+                loadTasks(); 
+            }
+        }
+    </script>
+
+</body>
+</html>
