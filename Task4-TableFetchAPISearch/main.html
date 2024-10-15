@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API content in a Table</title>  
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto mt-10">
+    <div class="flex justify-center mb-4">
+        <input type="text" id="search-input" class="w-1/3 px-4 py-2 text-sm text-gray-700 bg-white border border-gray-300 rounded-lg focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Search by Email">
+    </div>
+    <div class="relative overflow-x-auto mx-auto mt-4 w-3/4">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="px-6 py-3">PostID</th>
+                    <th scope="col" class="px-6 py-3">ID</th>
+                    <th scope="col" class="px-6 py-3">Name</th>
+                    <th scope="col" class="px-6 py-3">E-Mail</th>
+                    <th scope="col" class="px-6 py-3">Body</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+    <div class="flex justify-center mt-4">
+        <ul class="inline-flex -space-x-px pagination text-sm">
+        </ul>
+    </div>
+
+<script src="./fetchdata.js"></script>
+</body>
+</html>
