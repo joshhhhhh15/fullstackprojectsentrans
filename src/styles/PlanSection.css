@@ -1,0 +1,113 @@
+
+.plan-section {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .plan-section h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .plan-section h2 span {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+  }
+  
+  .subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .plan-card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+  }
+  
+  .plan-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: inherit;
+  }
+  
+  .plan-card .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: inherit;
+  }
+  
+  .plan-card ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .plan-card ul li {
+    margin-bottom: 8px;
+    text-align: left;
+    color: inherit;
+  }
+  
+  .plan-card button {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .plan-card:hover {
+    background-color: #003366;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .plan-card:hover ul li {
+    color: #fff; 
+  }
+  
+  .plan-card:hover button {
+    background-color: #007BFF; 
+    color: #fff; 
+  }
+  
+  .highlighted {
+    background-color: #fff; 
+    color: #333; 
+  }
+  
+  .highlighted:hover {
+    background-color: #003366; 
+    color: #fff; 
+  }
+  
+  .highlighted:hover ul li {
+    color: #fff;
+  }
+  
+  .highlighted:hover button {
+    background-color: #007BFF; 
+    color: #fff; 
+  }
+  

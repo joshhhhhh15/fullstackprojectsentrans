@@ -1,0 +1,65 @@
+
+.sponsors-section {
+  width: 100%;
+  text-align: center;
+}
+
+.sponsors-top {
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.sponsors-h1 {
+  font-size: 2 rem;
+  margin-bottom: 10px;
+}
+
+.sponsors-image {
+  max-width: 80%;
+  height: auto;
+}
+
+.sponsors-bottom {
+  background-color:#003366; 
+  padding: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.apps-image {
+  width: 600px; 
+  height: 400px;
+  margin-right: 20px;
+}
+
+.sponsors-content {
+  text-align: left;
+}
+
+.sponsors-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sponsors-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.sponsors-button {
+  background-color: #3b82f6; 
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.sponsors-button:hover {
+  background-color: #2563eb;
+}
